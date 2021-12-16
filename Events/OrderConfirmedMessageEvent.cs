@@ -2,7 +2,7 @@
 
 namespace DynamicInvokation
 {
-    public class OrderConfirmedMessageEvent : IEvent
+    public record OrderConfirmedMessageEvent : IEvent
     {
         public string Name { get; set; }
         public float TotalCost { get; set; }

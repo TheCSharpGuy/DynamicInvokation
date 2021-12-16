@@ -2,7 +2,7 @@
 
 namespace DynamicInvokation
 {
-    public class OrderPaidMessageEvent : IEvent
+    public record OrderPaidMessageEvent : IEvent
     {
         public string OrderID { get; set; }
         public string PaymentRef { get; set; }
