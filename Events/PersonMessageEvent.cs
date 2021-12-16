@@ -6,6 +6,6 @@ namespace DynamicInvokation
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public Guid MessageID => new();
+        public Guid MessageID => Guid.NewGuid();
     }
 }

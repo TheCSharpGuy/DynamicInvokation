@@ -7,7 +7,7 @@ namespace DynamicInvokation
         public string OrderID { get; set; }
         public string PaymentRef { get; set; }
         public float TotalCost { get; set; }
-        public Guid MessageID => new();
+        public Guid MessageID => Guid.NewGuid();
     }
 
 }
