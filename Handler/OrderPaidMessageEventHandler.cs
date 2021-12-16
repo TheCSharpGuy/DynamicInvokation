@@ -10,9 +10,9 @@ namespace DynamicInvokation
             try
             {
                 var eventMessage = (OrderPaidMessageEvent)(object)@event;
-                msg = $"Processing Event - OrderPaidMessageEvent" +
+                msg = $"\nProcessing Event - OrderPaidMessageEvent({eventMessage.MessageID})" +
                     $"\n Order #:{eventMessage.OrderID}" +
-                    $"\n Payment ref #:{eventMessage.PaymentRef}\n" +
+                    $"\n Payment ref #:{eventMessage.PaymentRef}" +
                     $"\n Total Amount :{eventMessage.TotalCost}\n";
                 Console.WriteLine(msg);
             }
