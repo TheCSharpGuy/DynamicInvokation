@@ -14,7 +14,7 @@ namespace DynamicInvokation
                     $"\n Order #:{eventMessage.OrderID}" +
                     $"\n Payment ref #:{eventMessage.PaymentRef}" +
                     $"\n Total Amount :{eventMessage.TotalCost}\n";
-                Console.WriteLine(msg);
+                //Console.WriteLine(msg);
             }
             catch (Exception exp)
             {

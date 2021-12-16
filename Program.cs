@@ -20,7 +20,11 @@ namespace DynamicInvokation
                 TotalCost = 100,
                 PaymentRef = Guid.NewGuid().ToString()
             };
-
+            var rcvMessage4 = new OrderSuccessfullEvent
+            {
+                Name = "KJ",
+                Email = "KJ@mail.com"
+            };
             Console.WriteLine("Hello World!");
             
             Factory factory = Factory.GetInstance();
@@ -28,7 +32,7 @@ namespace DynamicInvokation
             factory.DoProcess(rcvMessage1);
             factory.DoProcess(rcvMessage2); 
             factory.DoProcess(rcvMessage3);
-
+            factory.DoProcess(rcvMessage4);
         }
 
     }

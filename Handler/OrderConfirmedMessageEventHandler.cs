@@ -13,7 +13,7 @@ namespace DynamicInvokation
                 var eventMessage = (OrderConfirmedMessageEvent)(object)@event;
                 msg = $"\nProcessing Event - OrderMessageEvent({eventMessage.MessageID})" +
                     $"\n Name:{eventMessage.Name}\n Cost:{eventMessage.TotalCost}\n";
-                Console.WriteLine(msg);
+                //Console.WriteLine(msg);
             }
             catch(Exception exp)
             {

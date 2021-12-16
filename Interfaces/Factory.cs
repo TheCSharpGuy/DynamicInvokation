@@ -20,7 +20,8 @@ namespace DynamicInvokation
             {
                 Type type = Type.GetType(implName, true);
                 IEventHandler newInstance = (IEventHandler)Activator.CreateInstance(type);
-                newInstance.ProcessMessage<T>(@event);
+                var msg = newInstance.ProcessMessage<T>(@event);
+                Console.WriteLine(msg);
             }
             catch(TypeLoadException texp)
             {
