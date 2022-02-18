@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Reflection;
 
 namespace DynamicInvokation
@@ -32,14 +31,10 @@ namespace DynamicInvokation
         public string GetEventHandlerName(string typeName)
         {
             var sNamespaceHndl = Assembly.GetExecutingAssembly().FullName;
-            Console.WriteLine(sNamespaceHndl);
             sNamespaceHndl = $"{sNamespaceHndl.Substring(0, sNamespaceHndl.IndexOf(","))}.{typeName}Handler";
             return sNamespaceHndl;
         }
 
-        public string GetEventName<T>()
-        {
-            return typeof(T).Name;
-        }
+        public string GetEventName<T>() => typeof(T).Name;
     }
 }
