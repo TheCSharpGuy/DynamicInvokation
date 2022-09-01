@@ -7,7 +7,8 @@ namespace DynamicInvokation
         {
             ConsoleKeyInfo ki;
             Random rnd;
-            Factory factory = Factory.GetInstance();
+
+            IFactory factory = Factory.GetInstance();
             do
             {
                 rnd = new();
